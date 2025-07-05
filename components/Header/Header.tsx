@@ -11,16 +11,20 @@ export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="header">
-      <div className="header-content justify-content-between">
-        <nav className="navbar justify-content-start">
-          <Link href="/">
-            <Image src={logo} alt="Logo" className="logo" priority />
-          </Link>
-          <ActiveLink href="/products" className='nav-link'>Products</ActiveLink>
-          <ActiveLink href="/about" className='nav-link'>About</ActiveLink>
+    <header className={`header ${isMobileMenuOpen ? 'mobile-menu' : ''}`}>
+      <div className="header-content row mx-0 justify-content-between">
+        <nav className="navbar justify-content-start col-auto">
+          <div className="navbar-brand">
+            <Link href="/">
+              <Image src={logo} alt="Logo" className="logo" priority />
+            </Link>
+          </div>
+          <div className="navbar nav">
+            <ActiveLink href="/products" className='nav-link'>Products</ActiveLink>
+            <ActiveLink href="/about" className='nav-link'>About</ActiveLink>
+          </div>
         </nav>
-        <div className="mobile-button-wrapper">
+        <div className="mobile-button-wrapper col-auto">
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             className="mobile-button"
@@ -47,8 +51,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      <MobileMenu isOpen={isMobileMenuOpen} />
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
     </header>
   );
 }

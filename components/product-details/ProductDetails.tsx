@@ -35,9 +35,9 @@ export default function ProductDetails({ productDetails }: Props) {
           <Image src={productDetails.thumbnail} alt={productDetails.title} fill objectFit="contain" />
         </div>
       </div>
-      <div className="row mx-0 justify-content-center">
+      <div className="row mx-0 justify-content-center mt-3">
           <div className="product-info row mx-0 justify-content-between col-auto px-0">
-            <div className="col-auto">
+            <div className="col-12 px-0 col-sm-auto">
               <div className="row mx-0">
                 <span className='label'>Price: <span className='value'>{productDetails.price}$</span></span>
               </div>
@@ -55,7 +55,7 @@ export default function ProductDetails({ productDetails }: Props) {
                 <span className='label'>Brand: <span className='value'>{productDetails.brand}</span></span>
               </div>
             </div>
-            <div className="col-auto">
+            <div className="col-12 px-0 col-sm-auto">
               <div className="row mx-0">
                 <span className='label'>Discount Percentage: <span className='value'>{productDetails.discountPercentage}</span></span>
               </div>
@@ -68,17 +68,17 @@ export default function ProductDetails({ productDetails }: Props) {
             </div>
           </div>
       </div>
-      <div className="row mx-0 justify-content-center mt-5">
-        <div className="product-description col-9">
+      <div className="row mx-0 justify-content-md-center mt-5">
+        <div className="product-description col-12 col-md-9">
           <h1 className='title'>Product Description</h1>
           <p className='description'>{productDetails.description}</p>
         </div>
       </div>
 
-      <div className="row mx-0 justify-content-center mt-5">
-        <div className="product-images col-9">
+      <div className="row mx-0 justify-content-md-center my-5">
+        <div className="product-images col-12 col-md-9">
           <h1 className='title'>Product Images</h1>
-          <div className="images-list row mx-0">
+          <div className="images-list row mx-0 justify-content-center justify-content-sm-start">
             {productDetails.images.map((image: string, index: number) => (
                 <div key={index} className="product-small-image-container col-auto">
                   <Image src={image} alt={productDetails.title} fill objectFit="contain" />

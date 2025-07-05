@@ -26,7 +26,7 @@ export default function ProductsPage() {
 
   return (
     <div className={`search-page-container row mx-0 justify-content-center align-content-center ${results.length > 0 ? 'py-5' : ''}`}>
-      <div className="search-input-field col-6">
+      <div className="search-input-field col-12 col-sm-10 col-md-6">
         <label className="search-label">Search products by keyword</label>
         <div className="search-form">
           <input
@@ -40,17 +40,15 @@ export default function ProductsPage() {
             <Search className="search-icon" />
           </button>
         </div>
-      </div>
-
-      <div className="row mx-0 justify-content-center mt-3">
-        <div className="col-6">
-          {loading && <p>Loading...</p>}
-          {!loading && search.length > 0 && (<span className='products-count-label'>Total results count: <span className='products-count'>{results.length}</span></span>)}
-          {!loading && isSearchStarted && results.length == 0 ? <NoFoundData></NoFoundData>: ''}
+        <div className="row mx-0 justify-content-center mt-3 px-0">
+            {loading && <p>Loading...</p>}
+            {!loading && search.length > 0 && (<span className='products-count-label px-0'>Total results count: <span className='products-count'>{results.length}</span></span>)}
+            {!loading && isSearchStarted && results.length == 0 ? <NoFoundData></NoFoundData>: ''}
         </div>
       </div>
 
-      <div className="product-grid row mx-0 justify-content-center mt-5">
+
+      <div className="product-grid row mx-0 justify-content-center mt-5 col-12 col-xl-10">
         {results.map((product) => (
           <div key={product.id} className='col-auto px-0'>
             <ProductCard {...product} />

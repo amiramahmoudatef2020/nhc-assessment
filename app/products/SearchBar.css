@@ -73,31 +73,5 @@
 	height: 1.25rem;
 }
 .product-grid {
-	/* display: grid;
-	grid-template-columns: repeat(1, minmax(0, 1fr));
-	gap: 1.5rem;
-	padding: 1.5rem;  */
 	gap: 34px;
-	width: 80%;
-}
-
-/* Medium (md) screens: ≥768px */
-@media (min-width: 768px) {
-	.product-grid {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-}
-
-/* Large (lg) screens: ≥1024px */
-@media (min-width: 1024px) {
-	.product-grid {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-	}
-}
-
-/* Extra Large (xl) screens: ≥1280px */
-@media (min-width: 1280px) {
-	.product-grid {
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-	}
 }

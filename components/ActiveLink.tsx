@@ -7,9 +7,10 @@ interface Props {
   href: string;
   children: ReactNode;
   className?: string;
+  onClick?: () => any
 }
 
-export default function ActiveLink({ href, children, className = '' }: Props) {
+export default function ActiveLink({ href, children, className = '', onClick = () => {} }: Props) {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -17,6 +18,7 @@ export default function ActiveLink({ href, children, className = '' }: Props) {
     <Link
       href={href}
       className={`${isActive ? 'active-link': ''} ${className}`}
+      onClick={onClick}
     >
       {children}
     </Link>
