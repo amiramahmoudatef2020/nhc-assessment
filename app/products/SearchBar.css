@@ -16,7 +16,8 @@
 }
 
 .products-count-label,
-.products-count {
+.products-count,
+.loading-label {
 	font-size: 14px;
 }
 
