@@ -1,8 +1,10 @@
 'use client';
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import Header from '../components/Header/Header';
 import './globals.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export default function RootLayout({
   children,
 }: {
@@ -14,7 +16,7 @@ export default function RootLayout({
         <Header />
 
         <NuqsAdapter>
-          <main className="main-content">{children}</main>
+          <main className="main-content flex-grow-1">{children}</main>
         </NuqsAdapter>
         <Footer />
       </body>

@@ -1,5 +1,5 @@
 import { getProductById } from '../../../lib/api/products';
-import ProductDetails from '../../../components/ProductDetails';
+import ProductDetails from '../../../components/product-details/ProductDetails';
 import { notFound } from 'next/navigation';
 import { getSafeParams } from '../../utils/params';
 
@@ -14,7 +14,9 @@ export default async function Page(ctx: { params: { id: string } }) {
   }
 
   const product = await getProductById(id);
+  console.log(product)
+
   if (!product) return notFound();
 
-  return <ProductDetails product={product} />;
+  return <ProductDetails productDetails={product} />;
 }

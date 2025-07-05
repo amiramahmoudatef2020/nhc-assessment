@@ -1,81 +1,89 @@
 .header {
-  background-color: #f3f4f6; /* gray-100 */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
-  position: sticky;
-  top: 0;
-  z-index: 50;
+	background-color: #f3f4f6;
+	position: sticky;
+	height: 80px;
+	padding: 0 28px;
 }
 
 .container {
-  max-width: 80rem; /* max-w-7xl */
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 4rem; /* h-16 */
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.logo {
-  width: 3rem; /* w-12 */
-  height: auto;
+	max-width: 80rem; /* max-w-7xl */
+	margin: 0 auto;
+	padding: 0 1rem;
 }
 
 .nav-link {
-  color: #555;
-  text-decoration: none;
+	margin: 0 73px;
+	font-size: 16px;
+	font-family: 'abel-regular';
+
+	&.active-link {
+		color: #285f9d;
+	}
+}
+
+.header-content {
+	/* display: flex;
+	align-items: center;
+	justify-content: space-between; */
+}
+
+/* .nav-container {
+	display: flex;
+	align-items: center;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.logo {
+	width: 3rem;
+	height: auto;
+}
+
+.nav-link {
+	color: #555;
+	text-decoration: none;
 }
 
 .nav-link:hover {
-  color: #285f9d; /* primary */
-}
+	color: #285f9d;
+} */
 
 .mobile-button-wrapper {
-  display: none;
+	display: none;
 }
 
-@media (min-width: 768px) {
-  .mobile-button-wrapper {
-    display: flex;
-    gap: 1rem;
-  }
-}
+/* @media (min-width: 768px) {
+	.mobile-button-wrapper {
+		display: flex;
+		gap: 1rem;
+	}
+} */
 
 .mobile-button {
-  color: #374151; /* gray-700 */
-  padding: 0.5rem;
-  border-radius: 0.375rem;
-  outline: none;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+	color: #374151; /* gray-700 */
+	padding: 0.5rem;
+	border-radius: 0.375rem;
+	outline: none;
+	border: none;
+	background: transparent;
+	cursor: pointer;
 }
 
 .mobile-button:hover {
-  color: #1d4ed8; /* blue-700 */
+	color: #1d4ed8; /* blue-700 */
 }
 
 .mobile-button:focus {
-  box-shadow: 0 0 0 2px #60a5fa; /* ring-blue-400 */
+	box-shadow: 0 0 0 2px #60a5fa; /* ring-blue-400 */
 }
 
 .mobile-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
 }

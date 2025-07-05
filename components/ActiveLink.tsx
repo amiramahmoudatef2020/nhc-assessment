@@ -16,9 +16,7 @@ export default function ActiveLink({ href, children, className = '' }: Props) {
   return (
     <Link
       href={href}
-      className={`no-underline    ${
-        isActive ? 'text-blue-500' : 'text-[#000000]'
-      } ${className}`}
+      className={`${isActive ? 'active-link': ''} ${className}`}
     >
       {children}
     </Link>
